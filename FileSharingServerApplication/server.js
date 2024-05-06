@@ -1,5 +1,6 @@
 const WebSocket = require('ws');
 const path = require('path');
+const express = require('express');
 const app = express();
 const port = 3000;
 
@@ -8,7 +9,7 @@ const wss = new WebSocket.Server({ port: 8080 });
 // Serving up static files from the public directory
 app.use(express.static('public'));
 
-app.list(port, () => {
+app.listen(port, () => {
    console.log(`Server running on http://localhost:${port}`);
 });
 
