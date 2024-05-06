@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "FileSharingServerApplication", "FileSharingServerApplication\FileSharingServerApplication.esproj", "{E0D5BB32-B669-4A5F-A38F-EA69B448A6D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0D5BB32-B669-4A5F-A38F-EA69B448A6D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D5BB32-B669-4A5F-A38F-EA69B448A6D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D5BB32-B669-4A5F-A38F-EA69B448A6D0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E0D5BB32-B669-4A5F-A38F-EA69B448A6D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D5BB32-B669-4A5F-A38F-EA69B448A6D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0D5BB32-B669-4A5F-A38F-EA69B448A6D0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD402D60-D4A3-4D29-984E-2B88B4018299}
+	EndGlobalSection
+EndGlobal
