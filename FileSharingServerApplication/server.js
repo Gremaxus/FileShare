@@ -1,6 +1,7 @@
 const WebSocket = require('ws');
 const path = require('path');
 const express = require('express');
+const db = require('./database');
 const app = express();
 const port = 3000;
 
@@ -13,8 +14,17 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Creating the routes between the different web pages
-app.get('/', (req, res) => {
-   res.render('index', { currentTime: new Date().toTimeString()});
+app.get('/', async (req, res) => {
+   try {
+      const users = await db.getAllUsers(); // Make sure db.getAllUsers() is an async function
+      res.render('index', {
+          currentTime: new Date().toTimeString(),
+          users: users
+      });
+  } catch (error) {
+      console.error('Error fetching users:', error);
+      res.status(500).send('Error fetching user data');
+  }
 });
 
 app.get('/about', (req, res) => {
