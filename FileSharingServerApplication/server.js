@@ -35,3 +35,6 @@ wss.on('connection', function connection(ws) {
 });
 
 console.log('Signaling server running on ws://localhost:8080');
+
+
+// Brendan is a retard
