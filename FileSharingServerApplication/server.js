@@ -43,6 +43,18 @@ app.get('/known', (req, res) => {
    res.render('known')
 });
 
+// Routing for error 404
+app.use((err, req, res, next) => {
+   console.error(err.stack);
+   res.status(404).render('404', {title: '404: Page Not Found'});
+});
+
+// Error handling for unforeseen server issues
+app.use((err, req, res, next) => {
+   console.error(err.stack); // Logging for debugging
+   res.status(500).render('500', { title: '500: Internal Server Error' });
+});
+
 // Serving up static files from the public directory
 app.use(express.static('public'));
 
@@ -78,5 +90,4 @@ wss.on('connection', function connection(ws) {
 });
 
 console.log('Signaling server running on ws://localhost:8080');
-
 
